@@ -1,13 +1,11 @@
 <template>
   <nav id="nav">
-    <ul class="list">
       <router-link tag="li" class="item" to="/">Home</router-link>
       <router-link tag="li" class="item" to="/propos">A Propos</router-link>
       <router-link tag="li" class="item" to="/evenements">Evenements</router-link>
       <router-link tag="li" class="item" to="/connecter">Se connecter</router-link>
-      
-    </ul>
-  </nav>
+      <router-link tag="button" class="inscription" to="/inscrire">S'inscrire</router-link>
+  </nav> 
 </template>
 
 <script>
@@ -17,26 +15,36 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#nav {
+
+ #nav {
+   display: flex;
+   width: 100%;
+   flex-direction:row;
+   justify-content: space-between;
+   align-items:center;
   color: grey;
   font-size: 15px;
-  max-width: 700px;
+  margin-left: 40%;
+   }
+
+.item {
+  width: 20%;
+  text-align:center;
   cursor: pointer;
-  & > .list {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    align-items: center;
-    & > .item {
-      height: 33px;
-      list-style: none;
-      margin-right: 54px;
-    }
-    & > .item:last-of-type {
-      margin-right: 0;
-    }
-  }
 }
+  .inscription {
+    background: #0078e1;
+    width: 159px;
+    height: 55px;
+    border-radius: 8px;
+    padding: 0 25px;
+    color: white;
+    font-weight: 500;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
 
 
 

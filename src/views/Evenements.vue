@@ -1,62 +1,42 @@
 <template>
   <div class="evenements">
           <section id="presentation">
-
-          
-
-          <div id="evenements_candidats">
+ <div id="evenements_candidats">
             <h2 class="titreevenement">Evénements candidats,
             <br>événements clients :</h2>
            <span class="titreevenementsuite">nous rapprocher de vous</span></div>
-
            <img id="imagescalendar" src="@/assets/images/calendar.png" alt="calendrier">
-
-          
-
-
         </section>
-
           <div id="calendrier">
                   <section id="bareventsearch">
                         <article>
                           <h3 class="chercher">Je cherche </h3>
                           <select class="event">
                             <option value="Evenement">--Evenement--</option>
-                            <option value="Projet">Projet</option>
-                            
+                            <option value="Projet">Projet</option>                        
                           </select>
                         </article>
-
                         <article>
                             <h3 class="lieu">Lieu </h3>
                             <select class="event">
                               <option value="paris">Paris</option>
-                              <option value="Clamart">Clamart</option>
-                              
+                              <option value="Clamart">Clamart</option>                              
                             </select>
                         </article>
-
                         <article>
                             <h3 class="le">Le </h3>
                             <select class="event">
                                 <option value="Evenement">--Evenement--</option>
                                 <option value="Projet">Projet</option>
-                              
                             </select>
                         </article>
-
                           <div id="icone">
                                <div id="buttonsearch">
                                  <img class="loupe" src="@/assets/images/IMG/search.svg" alt="">
                                 <input class="bouton" type="button" required>
-                                
                                 </div>
                           </div>
                 </section>
-
-
-
-
                     <h2 class="alaune">Nos événements à la une</h2>
                     <section class="ateliers">
                             <div class="blocuno">
@@ -74,7 +54,6 @@
                                     <img src="@/assets/images/IMG/star.svg" alt="">
                                   </h5>
                             </div>
-
                             <div class="blocdos">
                               <img class="code" src="@/assets/images/IMG/Vignette-Cap-sur-le-Code.jpg" alt="">
                               <input class="rechercher" type="button" value="education">
@@ -92,7 +71,6 @@
                                 <img src="@/assets/images/IMG/star.svg" alt="">
                               </h5>
                             </div>
-
                             <div class="bloctres">
                                   <img class="code" src="@/assets/images/IMG/Vignette-Cap-sur-le-Code.jpg" alt="">
                                   <input class="rechercher" type="button" value="education">
@@ -112,11 +90,9 @@
                                   </div>
                           </section>
           </div>
-
           <h2 class="autreevent">Nos événements</h2>
           <section class="lastevent">
             <div class="Rectanglegris">
-              
               <h2 class="nettoyage">Nettoyage de plages et rivières</h2>
               <div class="gris">
               <h3 class="france"><img class="endroit" src="@/assets/images/IMG/map-marker-alt.svg" alt=""> Suresnes - Paris</h3>
@@ -124,19 +100,15 @@
               <h5 class="infoevent">Event information</h5>
               </div>
             </div>
-
             <div class="Rectanglegris">
-              
               <h2 class="informatique">Bases de l’informatique</h2>
               <div class="secondrectangle">
               <h3 class="france"><img class="endroit" src="@/assets/images/IMG/map-marker-alt.svg" alt=""> Suresnes - Paris</h3>
               <h4 class="tobe"> <img class="calendrier" src="@/assets/images/IMG/calendar-plus.svg" alt=""> To Be Determined</h4>
               <h5 class="infoevent">Event information</h5>
               </div>
-            </div>
-            
-            <div class="Rectanglegris">
-              
+            </div>            
+            <div class="Rectanglegris">              
               <h2 class="apicole">Club apicole</h2>
               <div class="thirdrectangle">
               <h3 class="france"><img class="endroit" src="@/assets/images/IMG/map-marker-alt.svg" alt=""> Suresnes - Paris</h3>
@@ -148,16 +120,12 @@
           </section>
   </div>
 </template>
-
-
 <style lang="scss" scoped>
 .evenements{
   max-width: 100%;
   max-height: 100%;
   width: 1440px;
   height: 3035px;
-
-
 }
 #presentation{
   display: flex;
@@ -168,10 +136,6 @@
 width: 50%;
 max-width: 724px;
 max-height: 660px;
-
-
-
-
 }
 #evenements_candidats{
   margin-top: 200px;
@@ -181,7 +145,6 @@ max-height: 660px;
   max-width: 706px;
   max-height: 177px;
   color: #515050;
-  
 }
 
 
@@ -211,10 +174,7 @@ max-height: 660px;
     border-radius: 8px;
     background-color: #ffffff;
     margin-right: 48px;
-
 }
-
-
 
 #icone{
 width:25%;
@@ -261,15 +221,13 @@ display: flex;
   margin-bottom: 55px;
 }
 .ateliers{
+  margin-left: 3.5%;
   display: flex;
   flex-direction:row;
   align-items: center;
   justify-content: space-around;
   width: 100%;
-  height: 100vh;
   margin-right:105px ;
-  margin-right:105px ;
-  margin-bottom: 132px;
 }
 
 .ateliers img{
@@ -303,7 +261,6 @@ display: flex;
 .ateliers .blocdos{
   display: flex;
   flex-direction: column;
-  /*justify-content: center;*/
   align-items:center;
   width: 365px;
   height: 549px;
@@ -440,6 +397,8 @@ display: flex;
   font-size: 49px;
   font-weight: 600;
   color: #515050;
+  margin-top: 100px;
+  margin-left: 103px;
   margin-bottom: 54px;
 }
 

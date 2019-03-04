@@ -17,7 +17,7 @@
 
     <article id="inscription">
       <h3>
-        <a href="#" role="navigation">Inscription</a>
+        <a href="/inscrire" role="navigation">Inscription</a>
       </h3>
       <h4>C'est gratuit !</h4>
     </article>
@@ -57,13 +57,13 @@
     <ul class="bas">
       <li class="import">
         <a href="#">
-          <img src="@/assets/images/IMG/users.svg">
+          <img src="@/assets/images/IMG/users.jpg">
           <h3 class>Se reunir</h3>
         </a>
       </li>
       <li class="import">
         <a href="#">
-          <img src="@/assets/images/IMG/calendar-plus.svg">
+          <img src="@/assets/images/IMG/calendar-plusBlue.jpg">
           <h3>Trouver des evenements
             <br>au coeur du numerique
           </h3>
@@ -71,7 +71,7 @@
       </li>
       <li class="import">
         <a href="#">
-          <img src="@/assets/images/IMG/meteor.svg">
+          <img src="@/assets/images/IMG/meteor.jpg">
           <h3>Participer à des
             <br>projets innovants
           </h3>
@@ -90,8 +90,11 @@
 
  <style lang="scss" scoped>
 
+a{
+  text-decoration: none;
+  color: #737373;
+}
 
->
 #haut{
   display: flex;
   flex-direction: column;
@@ -136,11 +139,19 @@
     bottom: 500px;
 
 }
+#inscription a {
+  text-decoration: none !important;
+    color: #0078e1;
+    font-size:30px;
+}
 #inscription h3 {
   width: 285px;
   height: 105px;
   border-radius: 14px;
   background-color: #f0f3f8;
+  display:flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #inscription h4 {
@@ -198,30 +209,24 @@
 }
 
 #container_barblue {
+  width: 65%;
   display: flex;
-  height: 234px;
-  justify-content: flex-end;
-  margin-top: 81px;
-  position: relative;
+  margin-top: 250px;
   align-items: center;
-  margin-bottom: 368px;
+  margin-left: 35%;
+  align-items: center;
+  margin-bottom: 186px;
 }
 #container_barblue .title {
-  font-size: 39px;
-  font-weight: 600;
-  color:white;
-  align-items: center;
   position: absolute;
-  right: 0;
-  z-index: 1;
-  right: 45px;
+  margin-left: 180px;
+  font-size: 60px;
+  color:white;
+  text-align: center;
 }
 #container_barblue .barblue {
-  justify-content: flex-end;
-  width: 70%;
-  position: absolute;
-  z-index: 0;
-  top: 0;
+  width: 100%;
+  height: 350px;
 }
 
 #wallpaper {
@@ -230,24 +235,14 @@
     background: red;
     color: darkred;
     height: 100%;
-    max-height: 2086px;
-    width: 100%;
-    max-width: 1440px;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
+    width: 80%;
+    margin-left: 15%;
+}
+
+.import img{
+  width: 10%;
+  height: 50px;
 }
 </style>
 
-<!--<script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
 
-export default {
-  name: 'home',
-  components: {
-    HelloWorld
-  }
-}
-</script>--->

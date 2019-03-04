@@ -3,7 +3,6 @@
         <Logo />
         <NavMain />
         <Button/>
-        <Burger />
     </header>
 </template>
 
@@ -11,14 +10,12 @@
 import Logo from "@/components/Logo.vue";
 import NavMain from "@/components/NavMain.vue";
 import Button from "@/components/RegisterButton.vue";
-import Burger from "@/components/Burger.vue";
 
 export default {
   components: {
     Logo,
     NavMain,
-    Button,
-    Burger
+    Button
   }
 }
 </script>

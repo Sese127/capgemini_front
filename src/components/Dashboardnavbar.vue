@@ -2,8 +2,6 @@
     <div>
         <header >
 
-
-  
    <section id="logo_image" role="logo" alt="logo CapGemini">
      
       <img src="assets/images/lgo_final.png">

@@ -44,7 +44,7 @@ export default new Router({
       // route level code-splitting
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName:  "logo" */ './views/Sinscrire.vue')
+      component: () => import(/* webpackChunkName:  "logo" */ './views/Sinscrire.vue'),
     },
 
     {
@@ -55,16 +55,22 @@ export default new Router({
       // which is lazy-loaded when the route is visited.
       component: () => import(/* webpackChunkName:  "logo" */ './views/Seconnecter.vue')
     },
-
-
     {
-      path: '/employees',
-      name: 'employees',
-      component: () => import('./views/Employees.vue')
-    },
-
-    
-    
-    
+      path: '/mon-profil',
+      name: 'mon-profil',
+      component: () => import('./views/AdminProfil.vue'),
+      children: [
+        {
+          path: "/get-employee-admin",
+          name: "get-employee-admin",
+          component: () => import("./components/Employees/GetListEmployee.vue")
+        },
+        {
+          path: "/post-employee-admin",
+          name: "post-employee-admin",
+          component: () => import('./components/Employees/PutEmployeeAdmin.vue')
+        }
+      ]
+    }
   ]
 })

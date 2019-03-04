@@ -6,19 +6,19 @@
       <div class="container">
         <h1 class="title">Connectez vous à votre compte</h1>
 
-        <input class="input" placeholder="  Veuillez entrer votre adresse mail Capgemini  "  type="email" required>
+        <input class="input" placeholder="  Veuillez entrer votre adresse mail Capgemini  "  type="email" required v-model="login.mail">
         
-        <input class="input" placeholder="  Veuillez entrer votre mot de passe  " type="tel" required>
+       <input type="password" class="input" placeholder="  Veuillez entrer votre mot de passe  " required v-model="login.password">
 
         <div id="souvenir">
           <input type="checkbox" class="souvenir" name="souvenir" checked>
           <label for="souvenir">Se Souvenir de moi</label>
         </div>
 
-        <button id="submit">
+        <button id="submit" @click='handleSubmit'>
           <span>Connexion</span>
         </button>
-        
+                <p>{{msgError}}</p>
         <span id="links">
           <a href="#">S'inscrire</a>
           <a href="#">Mot de passe oublié ?</a>
@@ -27,7 +27,55 @@
     </form>
   </div>
 </template>
+<script>
+import auth from "./../utils/auth";
+import axios from "axios";
 
+export default {
+data() {
+    return{
+        msgError: '',
+        logins: {},
+        login: {
+            mail: '',
+            password: ''
+        },
+    }
+},
+methods: {
+        connexion(context, log) {
+          console.log(context)
+          console.log(log)
+        axios.post("http://localhost:8181/ano/connexion", log)
+          .then(response => {
+            console.log("sucess", response);
+            console.log(response.data)
+            auth.setLocalToken(response.data);
+           this.$router.push('mon-profil');
+          }).catch(error => {
+          this.msgError = error.data
+          console.log("erreur", error);
+        }
+     );
+    },
+
+    handleSubmit(e) {
+    e.preventDefault();
+      if (
+        !this.login.mail ||
+        !this.login.password
+      ) {
+        console.log("error")
+        return this.displayMessage(
+          "Vous devez remplir tout les champs",
+          "warning"
+        );
+      } else this.connexion(this.login ,this.login);
+      console.log("methode password");
+    }
+}
+}
+</script>
 <style lang="scss" scoped>
 
 #connecter {
@@ -140,12 +188,3 @@ label {
 }
 
 </style>
-
-
-<script>
-// @ is an alias to /src
-
-export default {
-  name: "connecter"
-};
-</script>

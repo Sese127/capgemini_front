@@ -54,6 +54,7 @@
 #propos h2{
     margin-bottom: 34px;
     font-size: 24px;
+    text-align: center;
     
   }
   #propos h2 span{
@@ -62,6 +63,8 @@
 #propos p{
   
   font-size: 15px;
+  text-align:justify;
+  margin-right: 25px;
 }
 
 

@@ -1,5 +1,5 @@
 <template>
-    <router-link tag="button" class="inscription" to="/inscrire">S'inscrire</router-link>
+    <!-- <router-link tag="button" class="inscription" to="/inscrire">S'inscrire</router-link> -->
 </template>
 
 <script>
@@ -10,14 +10,11 @@ export default {
 
 <style lang="scss" scoped>
 .inscription {
-    background: blue;
+    background: #0078e1;
     width: 159px;
     height: 55px;
     border-radius: 8px;
     padding: 0 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     color: white;
     font-weight: 500;
     outline: none;

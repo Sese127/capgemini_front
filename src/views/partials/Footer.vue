@@ -1,34 +1,25 @@
 <template>
   <footer>
     <nav id="nav_footer">
-      <ul class="list">
-        <router-link tag="li" class="item" to="/propos">Contact</router-link>
-        <router-link tag="li" class="item" to="/propos">A Propos</router-link>
-        <router-link tag="li" class="item" to="/propos">nos associations</router-link>
-        <router-link tag="li" class="item" to="/propos">Mentions légales</router-link>
-        <router-link tag="li" class="item" to="/propos">Agenda</router-link>
-      </ul>
+      <router-link tag="li" class="item" to="/propos">Contact</router-link>
+      <router-link tag="li" class="item" to="/propos">A Propos</router-link>
+      <router-link tag="li" class="item" to="/propos">nos associations</router-link>
+      <router-link tag="li" class="item" to="/propos">Mentions légales</router-link>
+      <router-link tag="li" class="item" to="/propos">Agenda</router-link>
     </nav>
+    <hr>
     <div id="bottom">
       <Logo/>
       <nav id="reseau_sociaux">
-        <ul class="list">
-          <li class="item">
             <a href="#">
               <img class="reseau" src="@/assets/images/IMG/facebook-square.svg">
             </a>
-          </li>
-          <li class="item">
             <a href="#">
               <img class="reseau" src="@/assets/images/IMG/linkedin-in.svg">
             </a>
-          </li>
-          <li class="item">
             <a href="#">
               <img class="reseau" src="@/assets/images/IMG/twitter.svg">
             </a>
-          </li>
-        </ul>
       </nav>
     </div>
   </footer>
@@ -48,38 +39,67 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.reseau {
-  width: 22px;
-  height: 22px;
+hr {
+  margin-top: 46px;
 }
-
 #nav_footer {
-  max-width: 75%;
-  margin: 0 auto;
+  width: 100%;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
-
-#nav_footer .list {
-  display: flex;
-  & > .item {
-      flex: 1;
-  }
+.item {
+  justify-content: space-around;
 }
-
 #bottom {
+  width: 100%;
   display: flex;
-   justify-content: space-between;
- & > * {
-     width: 50%;
- }
+  flex-direction: row;
+  align-items: center;
 }
-
-
 #reseau_sociaux {
-    display: flex;
-    align-items: center;
+  width: 5%;
+  display:flex;
+  margin-left: 40%;
+  justify-content: space-around;
 }
 
-#reseau_sociaux .list {
-    display: flex;
+.reseau {
+    width: 50%;
+  height: 100px;
 }
+// .reseau {
+//   width: 22px;
+//   height: 22px;
+// }
+
+// #nav_footer {
+//   max-width: 75%;
+//   margin: 0 auto;
+// }
+
+// #nav_footer .list {
+//   display: flex;
+//   & > .item {
+//       flex: 1;
+//   }
+// }
+
+// #bottom {
+//   display: flex;
+//    justify-content: space-between;
+//  & > * {
+//      width: 50%;
+//  }
+// }
+
+
+// #reseau_sociaux {
+//     display: flex;
+//     align-items: center;
+// }
+
+// #reseau_sociaux .list {
+//     display: flex;
+// }
 </style>
