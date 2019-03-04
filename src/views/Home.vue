@@ -142,7 +142,7 @@ a{
 #inscription a {
   text-decoration: none !important;
     color: #0078e1;
-    font-size:30px;
+    font-size:43px;
 }
 #inscription h3 {
   width: 285px;
